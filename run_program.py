@@ -33,6 +33,16 @@ def run_improved_analysis():
         print(f"Error running improved analysis: {e}")
     print()
 
+def run_professional_gui():
+    """Run the professional GUI with advanced features"""
+    print("Launching Professional GUI...")
+    try:
+        subprocess.Popen([sys.executable, "professional_gui.py"])
+        print("Professional GUI launched successfully!")
+    except Exception as e:
+        print(f"Error launching Professional GUI: {e}")
+    print()
+
 def run_improved_gui():
     """Run the improved GUI"""
     print("Launching improved GUI...")
@@ -52,13 +62,14 @@ def main():
     print("1. View instructions for original notebook")
     print("2. Run improved analysis system")
     print("3. Launch improved GUI")
-    print("4. Run all improvements")
-    print("5. Exit")
+    print("4. Launch Professional GUI (NEW!)")
+    print("5. Run all improvements")
+    print("6. Exit")
     print()
     
     while True:
         try:
-            choice = input("Enter your choice (1-5): ").strip()
+            choice = input("Enter your choice (1-6): ").strip()
             
             if choice == '1':
                 run_original_notebook()
@@ -67,14 +78,17 @@ def main():
             elif choice == '3':
                 run_improved_gui()
             elif choice == '4':
+                run_professional_gui()
+            elif choice == '5':
                 print("Running all improvements...")
                 run_improved_analysis()
                 run_improved_gui()
-            elif choice == '5':
+                run_professional_gui()
+            elif choice == '6':
                 print("Goodbye!")
                 break
             else:
-                print("Invalid choice. Please enter 1-5.")
+                print("Invalid choice. Please enter 1-6.")
                 
         except KeyboardInterrupt:
             print("\nExiting...")
