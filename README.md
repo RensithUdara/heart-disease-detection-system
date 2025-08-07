@@ -1,4 +1,4 @@
-# Heart Disease Detection System - Improved Version
+# Heart Disease Detection System
 
 A comprehensive machine learning system for predicting heart disease risk with enhanced features, better algorithms, and an improved user interface.
 
