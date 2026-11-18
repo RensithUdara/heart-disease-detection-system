@@ -11,6 +11,7 @@ This enhanced GUI includes:
 6. Export functionality
 """
 
+import utils.session
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 import pandas as pd
